@@ -1,5 +1,14 @@
+.main-content {
+  padding-top: 4.5rem;
+  overflow: hidden;
+  min-height: 120vh;
+}
+
+.logo-responsive {
+  font-size: 1.2rem;
+}
+
 .main-img {
-  margin-top: 25%;
   padding: 0 30%;
   display: none;
 }
@@ -10,32 +19,55 @@
 }
 
 .h1-responsive {
-  padding-top: 50%;
+  color: #007bff !important;
+  padding-bottom: 1rem;
 }
 
 @media only screen and (min-width: 321px) {
-  .h1-responsive {
-    padding-top: 40%;
+  .main-content {
+    padding-top: 2.5rem;
+    min-height: 0;
+  }
+  .logo-responsive {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .main-content {
+    padding-top: 2rem;
   }
 }
 
 @media only screen and (min-width: 500px) {
+  .main-content {
+    padding-top: 1rem;
+  }
+  .logo-responsive {
+    font-size: 1.4rem;
+  }
   .h1-responsive {
     padding-top: 20%;
+  }
+  .appear-img {
+    max-width: 90%;
   }
 }
 
 @media only screen and (min-width: 992px) {
+  .logo-responsive {
+    font-size: 2rem;
+  }
   .main-img {
     display: block;
-    padding-left: 20%;
-    padding-right: 25%;
-    margin-top: 0;
+    padding-left: 30%;
+    padding-right: 35%;
   }
   .appear-img {
     display: none;
   }
   .h1-responsive {
-    padding-top: 10%;
+    color: #000 !important;
+    padding-bottom: 0;
   }
 }
