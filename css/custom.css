@@ -1,0 +1,41 @@
+.main-img {
+  margin-top: 25%;
+  padding: 0 30%;
+  display: none;
+}
+
+.appear-img {
+  display: block;
+  padding: 1% 20%;
+}
+
+.h1-responsive {
+  padding-top: 50%;
+}
+
+@media only screen and (min-width: 321px) {
+  .h1-responsive {
+    padding-top: 40%;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .h1-responsive {
+    padding-top: 20%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .main-img {
+    display: block;
+    padding-left: 20%;
+    padding-right: 25%;
+    margin-top: 0;
+  }
+  .appear-img {
+    display: none;
+  }
+  .h1-responsive {
+    padding-top: 10%;
+  }
+}
