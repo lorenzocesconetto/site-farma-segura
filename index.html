@@ -191,14 +191,14 @@
         </div>
       </div>
 
-      <div class="site-section" id="features-section">
+      <div class="site-section pt-5" id="features-section">
         <div class="container">
           <div
             class="row mb-5 justify-content-center text-center aos-init aos-animate"
             data-aos="fade-up"
           >
             <div class="col-7 text-center mb-5">
-              <h2 class="section-title">Como funciona</h2>
+              <h2 class="section-title pt-5">Como funciona</h2>
               <p class="lead">É bem simples :)</p>
             </div>
           </div>
@@ -352,13 +352,13 @@
       </div> -->
 
       <div
-        class="site-section testimonial-wrap bg-light mb-4"
+        class="site-section testimonial-wrap bg-light mb-4 pt-5"
         id="testimonials-section"
       >
         <div class="container">
           <div class="row mb-5">
             <div class="col-12 text-center">
-              <h2 class="section-title mb-3">Nossos clientes</h2>
+              <h2 class="section-title mb-3 pt-5">Nossos clientes</h2>
             </div>
           </div>
         </div>
@@ -459,38 +459,109 @@
               <p class="text-black"><strong>Lucas Comarella</strong></p>
             </div>
           </div>
+
+          <div>
+            <div class="testimonial">
+              <figure
+                class="mb-4 d-block align-items-center justify-content-center"
+              >
+                <div>
+                  <img
+                    src="images/alexandre.jpg"
+                    alt="Image"
+                    class="w-100 img-fluid mb-3 shadow"
+                  />
+                </div>
+              </figure>
+              <blockquote class="mb-3">
+                <p>
+                  &ldquo;A Farma Segura facilita demais a minha vida, não
+                  preciso mais ir a farmácia toda semana e recebo tudo em casa
+                  conforme a prescrição!&rdquo;
+                </p>
+              </blockquote>
+
+              <p class="text-black"><strong>Alexandre Repsold</strong></p>
+            </div>
+          </div>
         </div>
       </div>
 
+      <!-- Form -->
       <div
         class="site-section bg-image2 overlay"
         id="contact-section"
-        style="background-image: url('images/hero_1.jpg')"
+        style="background-image: url('images/hero_1.jpg'); padding-top: 5rem"
       >
         <div class="container">
           <div class="row mb-5">
             <div class="col-12 text-center">
-              <h2 class="section-title mb-3 text-white">
-                Cadastro (incluso 1 mês grátis)
-              </h2>
+              <h2 class="section-title mb-3 text-white">Fila de espera</h2>
             </div>
           </div>
           <div class="row justify-content-center">
             <div class="col-lg-7 mb-5">
-              <!-- Google Forms -->
-              <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSck8ho-T6eQJW2S2NUf7A-ueheSsyHr9vDgrFaPZ4LD9iCZ_g/viewform?embedded=true"
-                style="width: 100%"
-                height="820"
-                frameborder="0"
-                marginheight="0"
-                marginwidth="0"
-                >Loading…</iframe
+              <form
+                id="form"
+                action="https://buscamed.com.br/api/v1/wait_line"
+                method="POST"
+                class="p-5 bg-white"
               >
+                <h2 class="h4 text-black mb-5">Cadastre-se é grátis</h2>
+                <div class="row form-group">
+                  <div class="col-md-12">
+                    <label class="text-black" for="name">Nome Completo</label>
+                    <input
+                      type="text"
+                      id="name"
+                      class="form-control rounded-1"
+                      name="name"
+                    />
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-12">
+                    <label class="text-black" for="email">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-control rounded-1"
+                      name="email"
+                    />
+                  </div>
+                </div>
+
+                <div class="row form-group">
+                  <div class="col-md-12">
+                    <label class="text-black" for="phone"
+                      >Celular com DDD</label
+                    >
+                    <input
+                      type="text"
+                      id="phone"
+                      class="form-control rounded-1"
+                      name="phone"
+                    />
+                  </div>
+                </div>
+
+                <div class="row form-group">
+                  <div class="col-md-12">
+                    <input
+                      id="form-submission"
+                      type="submit"
+                      value="Cadastrar :)"
+                      class="btn btn-primary mr-2 mb-2"
+                    />
+                    <p id="form-status"></p>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
+      <!-- End Form -->
 
       <div class="footer py-5 text-center">
         <div class="container">
@@ -512,6 +583,33 @@
     </div>
     <!-- .site-wrap -->
 
+    <!-- Whatsapp -->
+    <div>
+      <a
+        style="
+          right: 0.5%;
+          bottom: 0.1rem;
+          left: auto;
+          background: transparent
+            url(https://d335luupugsy2.cloudfront.net/cms/files/1446/1588875979/$5u0ndp8vgxo)
+            center center no-repeat;
+          width: 4rem;
+          height: 4rem;
+          background-size: 60px 60px;
+          cursor: pointer;
+          border: 0;
+          z-index: 900;
+          box-shadow: none;
+          position: fixed;
+          display: block;
+        "
+        aria-label="Abrir WhatsApp"
+        target="_blank"
+        href="https://api.whatsapp.com/send?phone=5519982652693&text=Olá,%20gostaria%20de%20tirar%20uma%20dúvida"
+      ></a>
+    </div>
+    <!-- End Whatsapp -->
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/popper.min.js"></script>
@@ -523,7 +621,55 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
-
     <script src="js/main.js"></script>
+
+    <!-- Submit form -->
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        // get the form elements defined in your form HTML above
+
+        var form = document.getElementById("form");
+        var button = document.getElementById("form-submission");
+        var status = document.getElementById("form-status");
+
+        // Success and Error functions for after the form is submitted
+
+        function success() {
+          form.reset();
+          button.style = "display: none ";
+          status.innerHTML = `<div class="alert alert-success" role="alert">Obrigado! Cadastro enviado</div>`;
+        }
+
+        function error() {
+          status.innerHTML = `<div class="alert alert-danger" role="alert">Oops! Tivemos um problema. Tente novamente mais tarde</div>`;
+        }
+
+        // handle the form submission event
+
+        form.addEventListener("submit", function (ev) {
+          ev.preventDefault();
+          var data = new FormData(form);
+          ajax(form.method, form.action, data, success, error);
+        });
+      });
+
+      // helper function for sending an AJAX request
+
+      function ajax(method, url, data, success, error) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState !== XMLHttpRequest.DONE) return;
+          if (xhr.status === 200) {
+            success(xhr.response, xhr.responseType);
+          } else {
+            error(xhr.status, xhr.response, xhr.responseType);
+          }
+        };
+        xhr.send(data);
+      }
+    </script>
+    <!-- End Submit form -->
   </body>
 </html>
