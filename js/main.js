@@ -66,6 +66,16 @@ jQuery(document).ready(function($) {
 			}
 		})
 
+    $('body').on('click', '.js-menu-close', function(e) {
+			var $this = $(this);
+			e.preventDefault();
+
+			if ( $('body').hasClass('offcanvas-menu') ) {
+				$('body').removeClass('offcanvas-menu');
+				$this.removeClass('active');
+			}
+		}) 
+
 		$('body').on('click', '.js-menu-toggle', function(e) {
 			var $this = $(this);
 			e.preventDefault();
@@ -219,7 +229,7 @@ jQuery(document).ready(function($) {
 	// navigation
   var OnePageNavigation = function() {
     var navToggler = $('.site-menu-toggle');
-   	$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
+   	$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a, .nav-button", function(e) {
       e.preventDefault();
 
       var hash = this.hash;
