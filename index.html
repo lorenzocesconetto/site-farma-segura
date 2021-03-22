@@ -8,44 +8,31 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Nunito:300,400,700"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/jquery-ui.css" />
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
-
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
-
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
-
-    <link rel="stylesheet" href="css/aos.css" />
-
-    <link rel="stylesheet" href="css/style.css" />
-
-    <link rel="stylesheet" type="text/css" href="css/partners.css" />
-
-    <link rel="stylesheet" type="text/css" href="css/custom.css" />
-
+      ga('create', 'G-YZ429T2ZKK', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-YZ429T2ZKK"
     ></script>
+
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      gtag("config", "G-JPLL36VE0M");
+      gtag("config", "G-YZ429T2ZKK");
     </script>
     <!-- END Global site tag (gtag.js) - Google Analytics -->
 
@@ -100,6 +87,33 @@
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
     <!-- End Hotjar -->
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:300,400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+
+    <link rel="stylesheet" href="css/aos.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/partners.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+
 
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -309,7 +323,7 @@
                   <h3>4. O primeiro mês é grátis</h3>
                   <p>
                     Você só pagará pelos medicamentos, nós faremos a organização
-                    e a entrega gratuitamente. Depois disso o valor da mensalidade é de <strong>R$ 39,90</strong>.
+                    e a entrega gratuitamente. Depois disso o valor da mensalidade é de <strong>R$ 29,90</strong>.
                   </p>
                 </div>
               </div>
@@ -541,7 +555,7 @@
                 class="p-5 bg-white"
               >
                 <h2 class="h4 text-black">Cadastre-se e ganhe 1 mês grátis</h2>
-                <p class="lead mb-5" style="font-size: .9rem;">Se você decidir continuar com o serviço, a mensalidade será de R$&nbsp;39,90</p>
+                <p class="lead mb-5" style="font-size: .9rem;">Se você decidir continuar com o serviço, a mensalidade será de R$&nbsp;29,90</p>
                 <div class="row form-group">
                   <div class="col-md-12">
                     <label class="text-black" for="name">Nome Completo</label>
@@ -584,6 +598,12 @@
 
                 <div class="row form-group">
                   <div class="col-md-12">
+                    
+                    <!-- Spinner -->
+                    <div id="form-spinner" style="display: none;" class="spinner-border text-primary" role="status">
+                    </div>
+                    <!-- End Spinner -->
+
                     <input
                       id="form-submission"
                       type="submit"
@@ -668,16 +688,20 @@
         var form = document.getElementById("form");
         var button = document.getElementById("form-submission");
         var status = document.getElementById("form-status");
+        var spinner = document.getElementById("form-spinner")
 
         // Success and Error functions for after the form is submitted
 
         function success() {
+          ga('send', 'event', 'Cadastro', 'Successful');
           form.reset();
-          button.style = "display: none ";
+          spinner.style = "display: none ";
           status.innerHTML = `<div class="alert alert-success" role="alert">Obrigado! Cadastro enviado</div>`;
         }
 
         function error() {
+          button.style = "display: inline-block";
+          spinner.style = "display: none ";
           status.innerHTML = `<div class="alert alert-danger" role="alert">Oops! Tivemos um problema. Tente novamente mais tarde</div>`;
         }
 
@@ -685,6 +709,9 @@
 
         form.addEventListener("submit", function (ev) {
           ev.preventDefault();
+          button.style = "display: none ";
+          spinner.style = "display: inline-block"
+
           var data = new FormData(form);
           ajax(form.method, form.action, data, success, error);
         });
