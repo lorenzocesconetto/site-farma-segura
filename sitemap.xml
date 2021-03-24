@@ -6,17 +6,10 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
 <url>
   <loc>https://farmasegura.com.br/</loc>
   <lastmod>2021-03-22T20:38:40+00:00</lastmod>
   <priority>1.00</priority>
 </url>
-<url>
-  <loc>https://farmasegura.com.br/index.html</loc>
-  <lastmod>2021-03-22T20:38:40+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
 
 </urlset>
