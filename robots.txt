@@ -1,0 +1,7 @@
+# Se voce esta vendo esse arquivo, temos um emprego pra voce! :)
+# Entre em contato pelo e-mail: recrutamento@farmasegura.com.br
+
+User-agent: *
+Disallow: /*
+Allow: /
+Sitemap: https://www.farmasegura.com.br/sitemap.xml
