@@ -3,5 +3,5 @@
 
 User-agent: *
 Allow: /$
-Disallow: /*
+Disallow: /
 Sitemap: https://www.farmasegura.com.br/sitemap.xml
