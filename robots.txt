@@ -2,6 +2,6 @@
 # Entre em contato pelo e-mail: recrutamento@farmasegura.com.br
 
 User-agent: *
+Allow: /$
 Disallow: /*
-Allow: /
 Sitemap: https://www.farmasegura.com.br/sitemap.xml
