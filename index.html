@@ -64,6 +64,15 @@
       fbq("init", "214304173359835");
       fbq("track", "PageView");
     </script>
+    
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        src="https://www.facebook.com/tr?id=214304173359835&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
 
     <!-- Submit form -->
     <script>
@@ -78,6 +87,7 @@
         // Success and Error functions for after the form is submitted
 
         function success() {
+          fbq('track', 'Lead'); // Track Lead
           form.reset();
           spinner.style = "display: none ";
           status.innerHTML = `<div class="alert alert-success" role="alert">Obrigado! Cadastro enviado</div>`;
@@ -119,15 +129,6 @@
       }
     </script>
     <!-- End Submit form -->
-
-    <noscript>
-      <img
-        height="1"
-        width="1"
-        src="https://www.facebook.com/tr?id=214304173359835&ev=PageView&noscript=1"
-      />
-    </noscript>
-    <!-- End Facebook Pixel Code -->
 
     <link rel="icon" href="images/favicon.png" type="image/x-icon"/>
 
